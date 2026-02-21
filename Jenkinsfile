@@ -1,17 +1,17 @@
 pipeline {
- agent any
- stages {
+  agent any
+  stages {
     stage('clone') {
       steps {
          git branch:'main', url: 'https://github.com/saipranavam/calculater.git';
        }
     }  
-    stage('compile') {
+     stage('compile') {
       steps {
         sh 'javac Calculator.java'
       }
      }
-    stage('build') {
+     stage('build') {
       steps {
         sh 'java Calculator 25 5'
       }
@@ -25,4 +25,6 @@ pipeline {
       }
     }
  }
+}
+  }
 }
