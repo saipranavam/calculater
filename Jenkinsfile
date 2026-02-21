@@ -15,9 +15,11 @@ pipeline {
        steps {
           sh 'java Calculator 25 5'
       }
+     }
       stage('test') {
         steps {
            sh 'java Calculator 30 -5'
+      }
       }
       stage('deploy') {
         steps {
@@ -25,6 +27,4 @@ pipeline {
       }
     }
  }
-}
-  }
 }
