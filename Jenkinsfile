@@ -3,7 +3,7 @@ agent any
 stages {
 stage('clone') {
 steps {
-git branch:'main', url: '’;
+git branch:'main', url: 'https://github.com/saipranavam/calculater.git’;
 }
 }
 stage('compile') {
